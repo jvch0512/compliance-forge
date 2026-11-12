@@ -1,0 +1,98 @@
+# One internal control can satisfy requirements of several frameworks ("implement once, comply many").
+# Mappings are indicative and meant as a starting point for a gap assessment, not legal advice.
+frameworks:
+  nis2: "NIS2 Directive (EU 2022/2555), Art. 21 and 23"
+  gdpr: "GDPR (EU 2016/679)"
+  iso27001: "ISO/IEC 27001:2022 Annex A"
+
+controls:
+  - id: GOV-01
+    title: Information security policy and risk analysis approved by management
+    domain: Governance
+    weight: 5
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(a)"], iso27001: ["A.5.1"], gdpr: ["Art. 24", "Art. 32(1)"]}
+  - id: GOV-02
+    title: Regular assessment of the effectiveness of security measures (audits, tests)
+    domain: Governance
+    weight: 3
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(f)"], iso27001: ["A.5.35", "A.5.36"], gdpr: ["Art. 32(1)(d)"]}
+  - id: INC-01
+    title: Incident response plan with roles, severity levels and escalation
+    domain: Incident management
+    weight: 5
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(b)"], iso27001: ["A.5.24", "A.5.26"], gdpr: ["Art. 33(5)"]}
+  - id: INC-02
+    title: Regulator notification process (24h early warning, 72h notification) for significant incidents and personal data breaches
+    domain: Incident management
+    weight: 5
+    effort: low
+    mappings: {nis2: ["Art. 23"], iso27001: ["A.5.26"], gdpr: ["Art. 33", "Art. 34"]}
+  - id: BCP-01
+    title: Tested backups, disaster recovery and business continuity plans
+    domain: Resilience
+    weight: 5
+    effort: high
+    mappings: {nis2: ["Art. 21(2)(c)"], iso27001: ["A.8.13", "A.5.30"], gdpr: ["Art. 32(1)(c)"]}
+  - id: SUP-01
+    title: Supplier security due diligence, contract clauses and monitoring
+    domain: Supply chain
+    weight: 4
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(d)"], iso27001: ["A.5.19", "A.5.20", "A.5.21"], gdpr: ["Art. 28"]}
+  - id: VUL-01
+    title: Vulnerability and patch management with defined SLAs
+    domain: Secure operations
+    weight: 5
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(e)"], iso27001: ["A.8.8"], gdpr: ["Art. 32(1)(b)"]}
+  - id: DEV-01
+    title: Secure development and change management
+    domain: Secure operations
+    weight: 3
+    effort: high
+    mappings: {nis2: ["Art. 21(2)(e)"], iso27001: ["A.8.25", "A.8.32"], gdpr: ["Art. 25"]}
+  - id: LOG-01
+    title: Centralized logging and security monitoring
+    domain: Secure operations
+    weight: 4
+    effort: high
+    mappings: {nis2: ["Art. 21(2)(b)"], iso27001: ["A.8.15", "A.8.16"], gdpr: ["Art. 32(1)(b)"]}
+  - id: AWR-01
+    title: Security awareness and cyber hygiene training; management training
+    domain: People
+    weight: 3
+    effort: low
+    mappings: {nis2: ["Art. 20(2)", "Art. 21(2)(g)"], iso27001: ["A.6.3"], gdpr: ["Art. 39(1)(b)"]}
+  - id: CRY-01
+    title: Cryptography and encryption policy (data at rest and in transit)
+    domain: Technical safeguards
+    weight: 4
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(h)"], iso27001: ["A.8.24"], gdpr: ["Art. 32(1)(a)"]}
+  - id: ACC-01
+    title: Access control, least privilege and joiner/mover/leaver process
+    domain: Technical safeguards
+    weight: 5
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(i)"], iso27001: ["A.5.15", "A.5.18", "A.8.2"], gdpr: ["Art. 32(1)(b)"]}
+  - id: ACC-02
+    title: Multi-factor authentication for remote, privileged and cloud access
+    domain: Technical safeguards
+    weight: 5
+    effort: low
+    mappings: {nis2: ["Art. 21(2)(j)"], iso27001: ["A.8.5"], gdpr: ["Art. 32(1)"]}
+  - id: AST-01
+    title: Asset inventory including systems that process personal data
+    domain: Governance
+    weight: 4
+    effort: medium
+    mappings: {nis2: ["Art. 21(2)(i)"], iso27001: ["A.5.9"], gdpr: ["Art. 30"]}
+  - id: PRV-01
+    title: Records of processing, data subject request handling and DPIA process
+    domain: Privacy
+    weight: 4
+    effort: medium
+    mappings: {gdpr: ["Art. 30", "Art. 15-22", "Art. 35"], iso27001: ["A.5.34"]}

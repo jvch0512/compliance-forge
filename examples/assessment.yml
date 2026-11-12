@@ -1,0 +1,19 @@
+# status: implemented | partial | planned | missing | not_applicable
+organization: Acme Logistics S.L. (example)
+assessed_on: 2026-03-01
+answers:
+  GOV-01: {status: implemented, owner: CISO, evidence: Policy v3 approved by the board}
+  GOV-02: {status: partial, owner: CISO, evidence: Annual pentest only}
+  INC-01: {status: partial, owner: SecOps, evidence: Plan exists but never exercised}
+  INC-02: {status: missing, owner: Legal}
+  BCP-01: {status: partial, owner: IT, evidence: Backups run nightly, restores not tested}
+  SUP-01: {status: missing, owner: Procurement}
+  VUL-01: {status: implemented, owner: IT, evidence: Monthly patch cycle, SLA by severity}
+  DEV-01: {status: planned, owner: Engineering}
+  LOG-01: {status: partial, owner: SecOps, evidence: Firewall and AD logs only}
+  AWR-01: {status: implemented, owner: HR}
+  CRY-01: {status: partial, owner: IT}
+  ACC-01: {status: partial, owner: IT, evidence: No leaver automation}
+  ACC-02: {status: missing, owner: IT}
+  AST-01: {status: planned, owner: IT}
+  PRV-01: {status: implemented, owner: DPO}
